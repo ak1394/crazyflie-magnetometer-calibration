@@ -28,12 +28,12 @@ these distortions magnetometer must be calibrated. To peform calibration, carry 
 
 7. Start Magnetometer_calibration script and rotate CF over multiple axis observing Magnetometer_calibration screen. As you rotate CF you should see more dots appearing on the screen. After a while you should see something similar to mag_cal.png. Hit Enter and inspect Processing console output, you should see output similar to the output below:
 
-    magn_ellipsoid_center = [1331.69, -553.710, 15.8198]
-    magn_ellipsoid_transform = [[0.984237, 0.0158896, -0.00133159], [0.0158896, 0.980074, -0.00996596], [-0.00133159, -0.00996596, 0.967180]]
+        magn_ellipsoid_center = [1331.69, -553.710, 15.8198]
+        magn_ellipsoid_transform = [[0.984237, 0.0158896, -0.00133159], [0.0158896, 0.980074, -0.00996596], [-0.00133159, -0.00996596, 0.967180]]
 
 Copy the output to a text editor. These are the values you will need to insert into calibrate_powered.py script and also into the lib/cfclient/ui/tabs/FlightTab.py of CF PC Client.
 
-# Hard Iron calibration for engine on mode
+# Hard Iron calibration for engine-on mode
 
 During the flight, higher currents on the CF cause additional hard iron distortions. To correct these, we sample CF magnetometer output at six various speeds motor speeds.
 
